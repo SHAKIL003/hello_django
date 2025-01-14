@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+
+<nav>This is Navigation Bar</nav>
+<h1>This is out Home Page </h1> 
+
+<div class= "grid grid-cols-3 gap-3 m-4">
+{% for psl in psls %}
+    <div class= "bg-blue-700 p-4 rounded"> 
+        <img class = "rounded" src = "{{psl.image.url}}" alt = "">
+        <h2 class= "text-2xl font-bold">{{psl.name}}</h2>
+        <a href="{% url 'psl_details' psl.id %}">
+            <button
+            type="button"
+            class="inline-flex items-center w-[100%] justify-center px-4
+            py-2 border border-transparent text-sm font-medium
+            Itext-white Obg-orange-600 Ohover:bg-orange-700
+            focus: outline-none focus: ring-2 focus: ring-offset-2
+            ]focus: ring-orange-500"
+            >
+            {{psl.type}} - {{psl.id}}
+        </button>
+    </a>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
+

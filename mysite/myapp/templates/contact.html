@@ -1,13 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-    <h1>Hello Django Devleopment to Contact Page</h1>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %} Contact Page {% endblock %}
+
+{% block content %}
+
+<h1>This is out Contact Page </h1> 
+
+
+{% endblock %}
