@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Pslmatches
-from django.shortcuts import get_list_or_404
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
@@ -11,7 +11,9 @@ def home(request):
     return render(request, "home.html", {'psls': psls})
 
 def psl_details(request, psl_id):
-    psl = get_list_or_404(Pslmatches, pk = psl_id)
+
+    psl = get_object_or_404(Pslmatches, pk = psl_id)
+
     return render(request, "psl_details.html", {'psl':psl})
 
 
