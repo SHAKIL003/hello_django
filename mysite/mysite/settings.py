@@ -138,6 +138,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS =[os.path.join(BASE_DIR,'static')]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_URL = 'login'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT =os.path.join(BASE_DIR,'media')
